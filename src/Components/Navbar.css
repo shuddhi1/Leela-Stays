@@ -1,0 +1,86 @@
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: center;  /* Centers the logo */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #d4c9ab;  /* Matching the beige background */
+  position: sticky;  /* Or use 'fixed' depending on your needs */
+  top: 0;
+  z-index: 1000;
+  }
+  
+  .logo{
+    height: 80px;  /* Adjust size here */
+    width: auto;  /* Keep aspect ratio */
+    position: relative;
+    z-index: 2;  /* Makes sure it stays above other elements */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Adds a shadow to pop out */
+    border-radius: 10px;  /* Slight rounding for a smoother look */
+    margin-bottom: -20px;
+  
+  }
+  .logos{
+    width: fit-content;
+  }
+  .nav-links {
+    display: flex;
+    gap: 30px;  /* Adds space between links */
+    margin-left: auto;  /* Pushes links to the right */
+    list-style: none;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+   
+  }
+  
+  .nav-links li a:hover {
+    color: #f0a500;
+  }
+  
+  /* Mobile Menu */
+  .mobile-menu-icon {
+    display: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  /* Mobile View Styling */
+  .nav-links-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    gap: 2rem;
+  }
+  
+  .nav-links-mobile li a {
+    font-size: 1.8rem;
+  }
+  
+  .nav-links-mobile li a:hover {
+    color: #f0a500;
+  }
+  
+  /* Responsive for Mobile */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .mobile-menu-icon {
+      display: block;
+    }
+  }
+  

@@ -1,38 +1,59 @@
-.App {
+/* Global margin for all content */
+body {
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* You can also add some responsiveness */
+@media (max-width: 768px) {
+  .page-content {
+    padding: 0 15px;
+  }
+}
+.header_container{
+  background-image: 'url("https://images.unsplash.com/photo-1465064154639-bc188708a175?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")';
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  padding: 20px;
+  color: rgb(8, 8, 8); /* Ensures text is readable on top of the image */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.slider_container{
+  margin: 8.33px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
+.slider  {
+  width: 100%; /* Adjust to fit the container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 600px; /* Optional: limit the height */
+  object-fit: cover; /* Adjust how the image fills its container */
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.three-d-border {
+  padding: 20px;
+  width: 400px;
+  height:200px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 2px solid #ddd; /* Main border */
+  box-shadow: 
+    inset 3px 3px 5px rgba(0, 0, 0, 0.1), /* Inner shadow */
+    3px 3px 10px rgba(0, 0, 0, 0.3), /* Bottom-right outer shadow */
+    -3px -3px 10px rgba(255, 255, 255, 0.8); /* Top-left outer highlight */
+  border-radius: 10px; /* Smooth corners */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin-top: 50px;
 }
