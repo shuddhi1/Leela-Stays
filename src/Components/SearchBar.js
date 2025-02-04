@@ -25,6 +25,8 @@ const SearchBar = () => {
     });
   };
   const handleInquiry = () => {
+     
+   
     const customerName = document.getElementById('customerName').value;
       const members=  document.getElementById('members').value;
    
@@ -32,8 +34,10 @@ const SearchBar = () => {
    const depdate =document.getElementById('depdate').value
     const message = `Hello Leela Stays! I am ${customerName}. i want to book a room on  ${arrdate}${depdate}. I am interested in booking and we are  ${members} members.`;
     const encodedMessage = encodeURIComponent(message);
-  
-    window.open(`https://wa.me/917906734034?text=${encodedMessage}`, '_blank');
+   
+
+    (customerName && members&&arrdate&&depdate)? window.open(`https://wa.me/917906734034?text=${encodedMessage}`, '_blank'):alert("Please enter all the information");
+    
   };
   
   return (

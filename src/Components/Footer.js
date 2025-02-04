@@ -1,41 +1,103 @@
-import React from 'react'
-
+import React from "react";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 
 function Footer() {
+  const footerStyle = {
+     backgroundColor: "#D4C9AB",
+    color: "white",
+    
+  };
+
+  const containerStyle = {
+    display: "grid",
+    gridTemplateColumns: "1fr",
+ 
+    maxWidth: "1200px",
+    margin: "0 auto",
+  };
+
+  const headingStyle = {
+    fontSize: "1.25rem",
+    fontWeight: "600",
+    marginBottom: "16px",
+    display: "grid", 
+    placeItems: "center",
+  };
+
+  const paragraphStyle = {
+    fontSize: "0.875rem",
+    opacity: "0.9",
+    display: "grid", 
+    placeItems: "center",
+  };
+
+  const linkStyle = {
+    color: "white",
+    textDecoration: "none",
+    cursor: "pointer",
+    transition: "color 0.3s",
+  };
+
+  const hoverEffect = {
+    color: "#38b2ac",
+  };
+
+  const iconListStyle = {
+    display: "flex",
+ 
+  };
+
+  const footerBottomStyle = {
+   
+    borderTop: "1px solid #D4C9AB",
+    textAlign: "center",
+    fontSize: "0.875rem",
+    opacity: "0.8",
+  };
+
   return (
-    <footer className="bg-gradient-to-r from-green-700 to-teal-600 text-white py-10">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+    <footer style={footerStyle}>
+      <div style={containerStyle}>
         {/* About Section */}
         <div>
-          <h2 className="text-xl font-semibold mb-3">Leela Stays</h2>
-          <p className="text-sm leading-relaxed">
+          <h2 style={{ fontSize: "1.5rem", fontWeight: "700" ,  display: "grid",
+  placeItems: "center"}}>Leela Stays</h2>
+          <p style={paragraphStyle}>
             Escape to serenity with Leela Stays, nestled in the picturesque hills of Dehradun. Your comfort and memorable experience are our priorities.
           </p>
         </div>
 
-        {/* Contact Information */}
+        {/* Contact Section */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-          <ul className="space-y-2">
-            <li>📍 Dehradun, Uttarakhand</li>
-            <li>📞 <a href="tel:+919876543210" className="hover:underline">+91 98765 43210</a></li>
-            <li>📧 <a href="mailto:contact@leelastays.com" className="hover:underline">contact@leelastays.com</a></li>
+          <h3 style={headingStyle}>Contact Us</h3>
+          <ul style={{ listStyle: "none", padding: "0" ,display: "grid",
+  placeItems: "center" }}>
+            <li style={{ display: "flex", alignItems: "center", gap: "8px" }}>📍 Dehradun, Uttarakhand</li>
+            <li style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              📞 <a href="tel:+919876543210" style={{ ...linkStyle }}>+91 98765 43210</a>
+            </li>
+            <li style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              📧 <a href="mailto:contact@leelastays.com" style={{ ...linkStyle }}>contact@leelastays.com</a>
+            </li>
           </ul>
         </div>
 
-        {/* Social Media Links */}
-        <div>
-          <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-          <div className="flex space-x-6">
-            <a href="#" className="hover:text-teal-300 transition-all">🌐 Facebook</a>
-            <a href="#" className="hover:text-teal-300 transition-all">📸 Instagram</a>
-            <a href="#" className="hover:text-teal-300 transition-all">🐦 Twitter</a>
+        {/* Social Section */}
+        <div style={{display: "grid",
+  placeItems: "center" ,marginBottom:"10px"}}>
+          <h3 style={headingStyle}>Follow Us</h3>
+          <div style={iconListStyle}>
+            <a href="#" style={{ ...linkStyle }} onMouseOver={(e) => (e.target.style.color = hoverEffect.color)} onMouseOut={(e) => (e.target.style.color = linkStyle.color)}>
+              <Facebook /> Facebook
+            </a>
+            <a href="#" style={{ ...linkStyle }} onMouseOver={(e) => (e.target.style.color = hoverEffect.color)} onMouseOut={(e) => (e.target.style.color = linkStyle.color)}>
+              <Instagram /> Instagram
+            </a>
+            <a href="#" style={{ ...linkStyle }} onMouseOver={(e) => (e.target.style.color = hoverEffect.color)} onMouseOut={(e) => (e.target.style.color = linkStyle.color)}>
+              <Twitter /> Twitter
+            </a>
           </div>
         </div>
-      </div>
-
-      <div className="mt-8 border-t border-teal-400 pt-4 text-center text-sm">
-        <p>&copy; 2025 Leela Stays. All rights reserved.</p>
       </div>
     </footer>
   );

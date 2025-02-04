@@ -20,13 +20,13 @@ const Maps = () => {
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
       center: [-74.5, 40], // starting position [lng, lat]
-      zoom: 9 // starting zoom
+      zoom: 12 // starting zoom
     });
   });
 
   return (
     <div
-      style={{ height: '100%' }}
+      style={{ height: '100%', width:"100%" }}
       ref={mapContainerRef}
       className="map-container"
     />
