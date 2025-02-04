@@ -22,25 +22,36 @@ function Photogrid() {
     <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={20}
-        slidesPerView={3}
+        
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         breakpoints={{
-          400: {
-            slidesPerView: 1, // 1 slide for small screens
-            spaceBetween: 10, // Less space for mobile
+
+          313: {
+            slidesPerView: 1, // 1 slide for very small screens (like iPhone SE)
+            spaceBetween: 10, // Less space for smaller devices
+          },
+          480: {
+            slidesPerView: 1, // 1 slide for smaller phones in portrait
+            spaceBetween: 15, // Slightly more space
           },
           768: {
-            slidesPerView: 2, // 2 slides for tablets
-            spaceBetween: 15, // Moderate spacing
+            slidesPerView: 2, // 2 slides for tablets (iPad and larger phones)
+            spaceBetween: 20, // Moderate spacing
           },
           1024: {
-            slidesPerView: 3, // 3 slides for desktops
-            spaceBetween: 20, // Default spacing
+            slidesPerView: 3, // 3 slides for standard desktops
+            spaceBetween: 25, // Default spacing for larger screens
+          },
+          1280: {
+            slidesPerView: 4, // 4 slides for wider desktops
+            spaceBetween: 30, // More space for wide screens
           },
         }}
+        
+        
         onSlideChange={() => console.log('slide change')}>
     <SwiperSlide> <img  src={photo1} alt="Logo"  className='slider' /></SwiperSlide>
     <SwiperSlide> <img  src={photo2} alt="Logo"  className='slider' /></SwiperSlide>
@@ -59,30 +70,36 @@ function Photogrid() {
   <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={20}
-        slidesPerView={3}
+        
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
         breakpoints={{
-          300: {
-            slidesPerView: 2, // 1 slide for small screens
-            spaceBetween: 10, // Less space for mobile
+          313: {
+            slidesPerView: 2, // 1 slide for very small screens (like iPhone SE)
+            spaceBetween: 10, // Less space for smaller devices
           },
-          400: {
-            slidesPerView: 2, // 1 slide for small screens
-            spaceBetween: 10, // Less space for mobile
+          480: {
+            slidesPerView: 2, // 1 slide for smaller phones in portrait
+            spaceBetween: 15, // Slightly more space
           },
           768: {
-            slidesPerView: 3, // 2 slides for tablets
-            spaceBetween: 15, // Moderate spacing
+            slidesPerView: 2, // 2 slides for tablets (iPad and larger phones)
+            spaceBetween: 20, // Moderate spacing
           },
           1024: {
-            slidesPerView: 4, // 3 slides for desktops
-            spaceBetween: 20, // Default spacing
+            slidesPerView: 3, // 3 slides for standard desktops
+            spaceBetween: 25, // Default spacing for larger screens
+          },
+          1280: {
+            slidesPerView: 4, // 4 slides for wider desktops
+            spaceBetween: 30, // More space for wide screens
           },
         }}
+        
+        
     >
     <SwiperSlide> <img  src={photo6} alt="Logo"  className='slider' /></SwiperSlide>
     <SwiperSlide> <img  src={photo5} alt="Logo"  className='slider' /></SwiperSlide>

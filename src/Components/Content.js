@@ -17,6 +17,7 @@ function Content() {
         margin: "auto",
         borderRadius: "12px",
         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+        overflow: "auto"
       }}
     >
       <section style={{ fontSize: "32px", fontWeight: "bold", marginBottom: "16px" }}>
