@@ -14,11 +14,12 @@ function Content() {
         fontFamily: "'Poppins', sans-serif",
         lineHeight: "1.8",
         maxWidth: "900px",
-        margin: "auto",
+        margin: "5px",
         borderRadius: "12px",
         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
         overflow: "auto",
         flex:1
+      
       }}
     >
       <section style={{ fontSize: "32px", fontWeight: "bold", marginBottom: "16px" }}>

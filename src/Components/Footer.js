@@ -33,6 +33,7 @@ function Footer() {
     opacity: "0.9",
     display: "grid", 
     placeItems: "center",
+  
   };
 
   const linkStyle = {
@@ -67,7 +68,7 @@ function Footer() {
           <h2 style={{ fontSize: "1.5rem", fontWeight: "700" ,  display: "grid",
   placeItems: "center"}}>Leela Stays</h2>
           <p style={paragraphStyle}>
-            Escape to serenity with Leela Stays, nestled in the picturesque hills of Dehradun. Your comfort and memorable experience are our priorities.
+            Escape to serenity with Leela Stays, nestled in the picturesque hills of Mussoorie.
           </p>
         </div>
 
