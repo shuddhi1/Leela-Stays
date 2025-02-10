@@ -43,8 +43,7 @@ const SearchBar = () => {
   
   return (
     <div className="search-bar-container">
-      <h3>Discover Unparalleled Serenity at LeelaStays</h3>
-      <p>Experience Unmatched Comfort and Style</p>
+      <h2>Discover Unparalleled Serenity at LeelaStays</h2>
       <form className="search-form" onSubmit={handleSearch}>
         <div className="form-group">
           <input
@@ -61,6 +60,7 @@ const SearchBar = () => {
           <input
             type="date"
             id='arrdate'
+            placeholder="Arrival"
             value={arrivalDate}
             onChange={(e) => setArrivalDate(e.target.value)}
             required
@@ -70,6 +70,7 @@ const SearchBar = () => {
         <div className="form-group">
           <input
             type="date"
+            placeholder="Departure"
             id ="depdate"
             value={departureDate}
             onChange={(e) => setDepartureDate(e.target.value)}
@@ -144,6 +145,7 @@ const SearchBar = () => {
            Inquire 
           </button>
         </div>
+
       </form>
     </div>
   );

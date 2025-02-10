@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import {  Instagram } from "lucide-react";
 import backgroundImage from "../media/nightsky.jpg";
 function Footer() {
   const footerStyle = {
@@ -7,8 +7,7 @@ function Footer() {
     color: "white",
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
-    height: '100vh',
-    opacity: 0.9
+    
     
   };
 
@@ -29,7 +28,7 @@ function Footer() {
   };
 
   const paragraphStyle = {
-    fontSize: "0.875rem",
+    fontSize: "1.1rem",
     opacity: "0.9",
     display: "grid", 
     placeItems: "center",
@@ -51,30 +50,16 @@ function Footer() {
     display: "flex",
  
   };
-
-  const footerBottomStyle = {
-   
-    borderTop: "1px solid #D4C9AB",
-    textAlign: "center",
-    fontSize: "0.875rem",
-    opacity: "0.8",
-  };
-
   return (
     <footer style={footerStyle}>
       <div   className='dancing-script' style={containerStyle}>
         {/* About Section */}
         <div>
-          <h2 style={{ fontSize: "1.5rem", fontWeight: "700" ,  display: "grid",
-  placeItems: "center"}}>Leela Stays</h2>
           <p style={paragraphStyle}>
             Escape to serenity with Leela Stays, nestled in the picturesque hills of Mussoorie.
           </p>
         </div>
-
-        {/* Contact Section */}
         <div>
-          <h3 style={headingStyle}>Contact Us</h3>
           <ul style={{ listStyle: "none", padding: "0" ,display: "grid",
   placeItems: "center" }}>
             <li style={{ display: "flex", alignItems: "center", gap: "8px" }}>📍 Mussoorie, Uttarakhand</li>
@@ -93,12 +78,10 @@ function Footer() {
           <h3 style={headingStyle}>Follow Us</h3>
           <div style={iconListStyle}>
           
-            <a href="#" style={{ ...linkStyle }} onMouseOver={(e) => (e.target.style.color = hoverEffect.color)} onMouseOut={(e) => (e.target.style.color = linkStyle.color)}>
+            <a href="https://www.instagram.com/leelastays/" style={{ ...linkStyle }} onMouseOver={(e) => (e.target.style.color = hoverEffect.color)} onMouseOut={(e) => (e.target.style.color = linkStyle.color)}>
               <Instagram />
             </a>
-            <a href="#" style={{ ...linkStyle }} onMouseOver={(e) => (e.target.style.color = hoverEffect.color)} onMouseOut={(e) => (e.target.style.color = linkStyle.color)}>
-              <Twitter /> 
-            </a>
+         
           </div>
         </div>
       </div>
