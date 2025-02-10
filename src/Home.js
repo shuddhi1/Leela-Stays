@@ -6,10 +6,12 @@ import Photogrid from "./Components/Photogrid";
 
 
 
+
 const Home = () =>(
     <div>
    <Header/>
     <Photogrid/>
+  
    <Footer/>
     </div>
   )

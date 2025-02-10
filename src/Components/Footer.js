@@ -1,10 +1,14 @@
 import React from "react";
 import { Facebook, Instagram, Twitter } from "lucide-react";
-
+import backgroundImage from "../media/nightsky.jpg";
 function Footer() {
   const footerStyle = {
-     backgroundColor: "#D4C9AB",
+    //  backgroundColor: "#D4C9AB",
     color: "white",
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    height: '100vh',
+    opacity: 0.9
     
   };
 
@@ -57,7 +61,7 @@ function Footer() {
 
   return (
     <footer style={footerStyle}>
-      <div style={containerStyle}>
+      <div   className='dancing-script' style={containerStyle}>
         {/* About Section */}
         <div>
           <h2 style={{ fontSize: "1.5rem", fontWeight: "700" ,  display: "grid",
@@ -72,9 +76,9 @@ function Footer() {
           <h3 style={headingStyle}>Contact Us</h3>
           <ul style={{ listStyle: "none", padding: "0" ,display: "grid",
   placeItems: "center" }}>
-            <li style={{ display: "flex", alignItems: "center", gap: "8px" }}>📍 Dehradun, Uttarakhand</li>
+            <li style={{ display: "flex", alignItems: "center", gap: "8px" }}>📍 Mussoorie, Uttarakhand</li>
             <li style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              📞 <a href="tel:+919876543210" style={{ ...linkStyle }}>+91 98765 43210</a>
+              📞 <a href="tel:+917906734034" style={{ ...linkStyle }}>+917906734034</a>
             </li>
             <li style={{ display: "flex", alignItems: "center", gap: "8px" }}>
               📧 <a href="mailto:contact@leelastays.com" style={{ ...linkStyle }}>contact@leelastays.com</a>
@@ -87,14 +91,12 @@ function Footer() {
   placeItems: "center" ,marginBottom:"10px"}}>
           <h3 style={headingStyle}>Follow Us</h3>
           <div style={iconListStyle}>
+          
             <a href="#" style={{ ...linkStyle }} onMouseOver={(e) => (e.target.style.color = hoverEffect.color)} onMouseOut={(e) => (e.target.style.color = linkStyle.color)}>
-              <Facebook /> Facebook
+              <Instagram />
             </a>
             <a href="#" style={{ ...linkStyle }} onMouseOver={(e) => (e.target.style.color = hoverEffect.color)} onMouseOut={(e) => (e.target.style.color = linkStyle.color)}>
-              <Instagram /> Instagram
-            </a>
-            <a href="#" style={{ ...linkStyle }} onMouseOver={(e) => (e.target.style.color = hoverEffect.color)} onMouseOut={(e) => (e.target.style.color = linkStyle.color)}>
-              <Twitter /> Twitter
+              <Twitter /> 
             </a>
           </div>
         </div>

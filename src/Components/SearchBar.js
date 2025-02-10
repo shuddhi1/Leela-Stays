@@ -29,10 +29,11 @@ const SearchBar = () => {
    
     const customerName = document.getElementById('customerName').value;
       const members=  document.getElementById('members').value;
-   
+    
      const arrdate = document.getElementById('arrdate').value;
-   const depdate =document.getElementById('depdate').value
-    const message = `Hello Leela Stays! I am ${customerName}. i want to book a room on  ${arrdate}${depdate}. I am interested in booking and we are  ${members} members.`;
+   const depdate =document.getElementById('depdate').value;
+   const pets=document.getElementById('').value;
+    const message = `Hello Leela Stays! I am ${customerName}. i want to book a room on  ${arrdate}${depdate}. I am interested in booking and we are ${members} members ${pets}. `;
     const encodedMessage = encodeURIComponent(message);
    
 
@@ -42,7 +43,7 @@ const SearchBar = () => {
   
   return (
     <div className="search-bar-container">
-      <h1>Discover Unparalleled Luxury at LeelaStays</h1>
+      <h3>Discover Unparalleled Luxury at LeelaStays</h3>
       <p>Experience Unmatched Comfort and Style</p>
       <form className="search-form" onSubmit={handleSearch}>
         <div className="form-group">

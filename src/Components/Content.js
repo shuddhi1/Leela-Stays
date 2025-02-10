@@ -17,7 +17,8 @@ function Content() {
         margin: "auto",
         borderRadius: "12px",
         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-        overflow: "auto"
+        overflow: "auto",
+        flex:1
       }}
     >
       <section style={{ fontSize: "32px", fontWeight: "bold", marginBottom: "16px" }}>
@@ -26,7 +27,7 @@ function Content() {
       <section style={{ fontSize: "24px", fontWeight: "600", marginBottom: "24px", color: "#2c7a7b" }}>
         Your Cozy Retreat in the Hills
       </section>
-      <section style={{ textAlign: "justify", marginBottom: "24px", fontSize: "18px" }}>
+      <section  style={{ textAlign: "justify", marginBottom: "24px", fontSize: "18px" }}>
         Escape to the serene beauty of the hills with Leela Stays, where comfort meets nature.
         Whether you're seeking a peaceful getaway, a romantic escape, or a family vacation, our
         homestay offers an unforgettable experience surrounded by lush greenery and breathtaking

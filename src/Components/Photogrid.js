@@ -14,11 +14,12 @@ import photo8 from '../media/sunset.jpg';
 import photo9 from '../media/WhatsApp Image 2025-01-08 at 6.36.11 PM.jpeg'
 import Content from './Content';
 import MapboxNavigationExample from './MapboxMap';
+import { Grid } from 'lucide-react';
 
 function Photogrid() {
   return (
     <div  className="slider_container" > 
-    <h4 style={{}}>Gallery</h4>
+    
     <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={20}

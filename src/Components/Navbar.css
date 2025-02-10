@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;  /* Centers the logo */
   align-items: center;
-  padding: 10px 20px;
+  padding: 0px 60px;
   background-color: #d4c9ab;  /* Matching the beige background */
   position: sticky;  /* Or use 'fixed' depending on your needs */
   top: 0;
@@ -83,4 +83,12 @@
       display: block;
     }
   }
+  
+.dancing-script {
+  font-family: "Dancing Script", serif;
+  font-optical-sizing: auto;
+
+  font-size: x-large;
+  font-style: normal;
+}
   

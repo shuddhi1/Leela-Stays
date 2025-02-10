@@ -28,7 +28,9 @@ body {
 }
 
 .slider_container{
-  margin: 8.33px;
+  margin: 111.33px 150px 150px 100px; 
+  border-radius: 2px;
+  
   
 }
 
@@ -39,6 +41,7 @@ body {
   height: auto; /* Maintain aspect ratio */
   max-height: 600px; /* Optional: limit the height */
   object-fit: cover; /* Adjust how the image fills its container */
+ 
 }
 .three-d-border {
   padding: 20px;
@@ -52,8 +55,10 @@ body {
     3px 3px 10px rgba(0, 0, 0, 0.3), /* Bottom-right outer shadow */
     -3px -3px 10px rgba(255, 255, 255, 0.8); /* Top-left outer highlight */
   border-radius: 10px; /* Smooth corners */
+  flex:1;
 
 }
+
 
 
 .mapbox-container{
