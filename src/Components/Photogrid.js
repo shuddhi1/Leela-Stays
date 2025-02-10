@@ -18,12 +18,12 @@ import { Grid } from 'lucide-react';
 
 function Photogrid() {
   return (
-    <div  className="slider_container" > 
+    <div  className="slider_container" style={{margin:"20px"}} > 
     
-    <Swiper
+    <Swiper 
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={20}
-        
+ 
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
@@ -31,7 +31,7 @@ function Photogrid() {
         breakpoints={{
 
           313: {
-            slidesPerView: 1, // 1 slide for very small screens (like iPhone SE)
+            slidesPerView: 2, // 1 slide for very small screens (like iPhone SE)
             spaceBetween: 10, // Less space for smaller devices
           },
           480: {

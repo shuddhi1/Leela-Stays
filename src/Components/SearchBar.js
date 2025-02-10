@@ -32,8 +32,8 @@ const SearchBar = () => {
     
      const arrdate = document.getElementById('arrdate').value;
    const depdate =document.getElementById('depdate').value;
-   const pets=document.getElementById('').value;
-    const message = `Hello Leela Stays! I am ${customerName}. i want to book a room on  ${arrdate}${depdate}. I am interested in booking and we are ${members} members ${pets}. `;
+  
+    const message = `Hello Leela Stays! I am ${customerName}. i want to book a room on  ${arrdate}${depdate}. I am interested in booking and we are ${members} members  pets :${pets}. `;
     const encodedMessage = encodeURIComponent(message);
    
 
