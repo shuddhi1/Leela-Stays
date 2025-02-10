@@ -79,3 +79,23 @@ body {
   border-radius: 8px;
   object-fit: cover;
 }
+
+
+
+
+  @media (max-width: 1000px) {
+    .selector_images {
+      flex-direction: row; /* Switch to row for small screens */
+    }
+    .preview_img{
+      width: 74vw;
+    }
+  }
+  @media (min-width:1000px) {
+    .selector_images{
+      flex-direction: column
+    }
+    .preview_img{
+      width: 45vw;
+    }
+  }

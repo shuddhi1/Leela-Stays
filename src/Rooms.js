@@ -22,7 +22,7 @@ const RoomsPage = () => {
   return (
     <div style={{ fontFamily: "Arial, sans-serif", lineHeight: 1.5 }}>
       {/* Page Title */}
-      <header style={{ backgroundColor: "#f8f9fa", padding: "10px", textAlign: "center" }}>
+      <header style={{ backgroundColor: "#f8f9fa", padding: "10px", textAlign: "center"}}>
         <h1 style={{ fontSize: "2.5rem", color: "#333" ,fontFamily: "Dancing Script" }}>Rooms at Leela Stays</h1>
       </header>
 
@@ -37,10 +37,10 @@ const RoomsPage = () => {
         {/* City Room */}
         <div  className='City View Room' style={{ marginTop: "2", padding: "10px",  display:"flex", flexWrap:"wrap",border: "1px solid #ddd", borderRadius: "8px" }}>
    
-          <div style={{ display: "flex", gap: "20px",  flexWrap:"wrap" }}>
+          <div style={{ display: "flex", gap: "20px",  flexWrap:"wrap" ,justifyContent:"space-around"}}>
 
           {/* Garden & City Room */}
-          <div style={{ marginTop: "20px", padding: "10px", border: "1px solid #ddd", borderRadius: "8px", width:"26vw"}}>
+          <div style={{ marginTop: "20px", padding: "10px", border: "1px solid #ddd", borderRadius: "8px"}}>
           <h4 style={{ fontSize: "1.8rem", color: "#555" ,display:"grid",justifyItems:"center" }}>Mountain & City View</h4>
           <div style={{ display: "flex", gap: "20px", marginTop: "10px",justifyContent: "space-around" }}>
 
@@ -76,7 +76,7 @@ const RoomsPage = () => {
             </div>
           </div>
         </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: "30px",justifyContent: "space-around" }}>
+            <div  className="selector_images"style={{ display: "flex", gap: "30px",justifyContent: "space-around" }}>
               {images.map((image, index) => (
                 <img
                   key={index}
@@ -84,11 +84,10 @@ const RoomsPage = () => {
                   alt={`Room Preview ${index + 1}`}
                   style={{
                        width: "10vw",
-                    height: "10vw",
-                    padding:"10px",
-                    borderRadius: "20px",
-                    cursor: "pointer", 
-                    objectFit: "cover",
+                       height: "10vw",
+                       borderRadius: "100px",
+                       cursor: "pointer", 
+                       objectFit: "cover",
                   }}
                   onMouseEnter={() => handleMouseEnter(image)}
                   onMouseLeave={handleMouseLeave}
@@ -112,10 +111,11 @@ const RoomsPage = () => {
             >
               {previewImage && (
                 <img
+                className="preview_img"
                   src={previewImage}
                   alt="Preview"
                   style={{
-                    width: "46vw",
+                    
                     height: "50vw",
                     objectFit: "cover",
                
@@ -137,7 +137,7 @@ const RoomsPage = () => {
    <div style={{ display: "flex", gap: "20px",  flexWrap:"wrap"  }}>
 
    {/* Garden & City Room */}
-   <div style={{ marginTop: "20px", padding: "10px", border: "1px solid #ddd", borderRadius: "8px", width:"26vw" }}>
+   <div style={{ marginTop: "20px", padding: "10px", border: "1px solid #ddd", borderRadius: "8px" }}>
    <h4 style={{ fontSize: "1.8rem", color: "#555", display:"grid",justifyItems:"center"}}>City & garden View </h4>
    <div style={{ display: "flex", gap: "20px", marginTop: "10px",justifyContent: "space-around" }}>
 
@@ -170,7 +170,7 @@ const RoomsPage = () => {
      </div>
    </div>
  </div>
-     <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+     <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
        {images.map((image, index) => (
          <img
            key={index}
@@ -209,8 +209,8 @@ const RoomsPage = () => {
            src={previewImage}
            alt="Preview"
            style={{
-             width: "46vw",
-             height: "50vw",
+            width: "77vw",
+            height: "60vw",
              objectFit: "cover",
              opacity: isHovered ? 1 : 0,
           
