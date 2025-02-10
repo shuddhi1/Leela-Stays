@@ -40,13 +40,13 @@ const RoomsPage = () => {
           <div style={{ display: "flex", gap: "20px",  flexWrap:"wrap" }}>
 
           {/* Garden & City Room */}
-          <div style={{ marginTop: "20px", padding: "10px", border: "1px solid #ddd", borderRadius: "8px" }}>
-          <h4 style={{ fontSize: "1.8rem", color: "#555" }}>Garden & City View Room</h4>
+          <div style={{ marginTop: "20px", padding: "10px", border: "1px solid #ddd", borderRadius: "8px", width:"26vw"}}>
+          <h4 style={{ fontSize: "1.8rem", color: "#555" ,display:"grid",justifyItems:"center" }}>Mountain & City View</h4>
           <div style={{ display: "flex", gap: "20px", marginTop: "10px",justifyContent: "space-around" }}>
 
             <div>
               <p style={{ margin: "5px 0" }}>
-                Price: <strong>₹3300/night</strong>
+                Price: <strong>₹4000/night</strong>
               </p>
               <p style={{ margin: "5px 0" }}>
                 Room Area: <strong>500 sq. ft.</strong>
@@ -54,7 +54,10 @@ const RoomsPage = () => {
               <p style={{ margin: "5px 0" }}>Amenities:</p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                 <li>🌟 King-size bed</li>
-                <li>🌟 Scenic garden view</li>
+                <li>🌟 Scenic Sunrise/Mountain view</li>
+                <li>🌟 Tea/coffee maker</li>
+                <li>🌟 Music System</li>
+                <li>🌟 Carpeted Flooring</li>
                 <li>🌟 Free WiFi</li>
               </ul>
               <button
@@ -73,7 +76,7 @@ const RoomsPage = () => {
             </div>
           </div>
         </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "30px",justifyContent: "space-around" }}>
               {images.map((image, index) => (
                 <img
                   key={index}
@@ -112,9 +115,10 @@ const RoomsPage = () => {
                   src={previewImage}
                   alt="Preview"
                   style={{
-                    width: "45vw",
-                    height: "45vw",
+                    width: "46vw",
+                    height: "50vw",
                     objectFit: "cover",
+               
                     opacity: isHovered ? 1 : 0,
                     transition: "opacity 0.5s ease-in-out",
                   }}
@@ -128,7 +132,99 @@ const RoomsPage = () => {
           </div>
         </div>
 
-     
+        <div  className='City View Room' style={{  padding: "10px",  display:"flex", flexWrap:"wrap",border: "1px solid #ddd", borderRadius: "8px",marginTop:"200px" }}>
+   
+   <div style={{ display: "flex", gap: "20px",  flexWrap:"wrap"  }}>
+
+   {/* Garden & City Room */}
+   <div style={{ marginTop: "20px", padding: "10px", border: "1px solid #ddd", borderRadius: "8px", width:"26vw" }}>
+   <h4 style={{ fontSize: "1.8rem", color: "#555", display:"grid",justifyItems:"center"}}>City & garden View </h4>
+   <div style={{ display: "flex", gap: "20px", marginTop: "10px",justifyContent: "space-around" }}>
+
+     <div>
+       <p style={{ margin: "5px 0" }}>
+         Price: <strong>₹3300/night</strong>
+       </p>
+       <p style={{ margin: "5px 0" }}>
+         Room Area: <strong>500 sq. ft.</strong>
+       </p>
+       <p style={{ margin: "5px 0" }}>Amenities:</p>
+       <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+         <li>🌟 King-size bed</li>
+         <li>🌟 Scenic garden view</li>
+         <li>🌟 Free WiFi</li>
+       </ul>
+       <button
+         style={{
+           marginTop: "10px",
+           backgroundColor: "#007bff",
+           color: "#fff",
+           padding: "10px 15px",
+           border: "none",
+           borderRadius: "5px",
+           cursor: "pointer",
+         }}
+       >
+         Send Enquiry
+       </button>
+     </div>
+   </div>
+ </div>
+     <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+       {images.map((image, index) => (
+         <img
+           key={index}
+           src={image}
+           alt={`Room Preview ${index + 1}`}
+           style={{
+                width: "10vw",
+             height: "10vw",
+             padding:"10px",
+             borderRadius: "20px",
+             cursor: "pointer", 
+             objectFit: "cover",
+           }}
+           onMouseEnter={() => handleMouseEnter(image)}
+           onMouseLeave={handleMouseLeave}
+         />
+       ))}
+     </div>
+
+     <div
+       style={{
+         width: "fit-content",
+         height: "fit-content",
+         backgroundColor: "#f0f0f0",
+         borderRadius: "8px",
+         display: "flex",
+
+         alignItems: "center",
+         justifyContent: "center",
+         overflow: "hidden",
+         position: "relative",
+       }}
+     >
+       {previewImage && (
+         <img
+           src={previewImage}
+           alt="Preview"
+           style={{
+             width: "46vw",
+             height: "50vw",
+             objectFit: "cover",
+             opacity: isHovered ? 1 : 0,
+          
+             transition: "opacity 0.5s ease-in-out",
+           }}
+         />
+       )}
+     </div>
+   </div>
+
+   <div>
+
+   </div>
+ </div>
       </section>
 
       {/* Comfort Rooms Section */}
