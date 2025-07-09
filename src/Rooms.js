@@ -177,12 +177,12 @@ const RoomsPage = () => {
            src={image}
            alt={`Room Preview ${index + 1}`}
            style={{
-                width: "10vw",
-             height: "10vw",
-             padding:"10px",
-             borderRadius: "20px",
-             cursor: "pointer", 
-             objectFit: "cover",
+            width: "10vw",
+                       height: "10vw",
+                       borderRadius: "100px",
+                       cursor: "pointer", 
+                       objectFit: "cover",
+             
            }}
            onMouseEnter={() => handleMouseEnter(image)}
            onMouseLeave={handleMouseLeave}
@@ -209,8 +209,8 @@ const RoomsPage = () => {
            src={previewImage}
            alt="Preview"
            style={{
-            width: "77vw",
-            height: "60vw",
+            width: "50vw",
+            
              objectFit: "cover",
              opacity: isHovered ? 1 : 0,
           
