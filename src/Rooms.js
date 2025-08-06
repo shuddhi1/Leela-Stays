@@ -1,304 +1,121 @@
 import React, { useState } from "react";
-import City1 from '../src/media/City1.jpeg';
-import City2 from '../src/media/City2.jpeg';
-import City3 from '../src/media/City3.jpeg';
-import City4 from '../src/media/City4.jpeg';
-
-const images = [City1, City2, City3, City4];
-
-const RoomsPage = () => {
-  const [previewImage, setPreviewImage] = useState(null);
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = (image) => {
-    setPreviewImage(image);
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  return (
-    <div style={{ fontFamily: "Arial, sans-serif", lineHeight: 1.5 }}>
-      {/* Page Title */}
-      <header style={{ backgroundColor: "#f8f9fa", padding: "10px", textAlign: "center"}}>
-        <h1 style={{ fontSize: "2.5rem", color: "#333" ,fontFamily: "Dancing Script" }}>Rooms at Leela Stays</h1>
-      </header>
-
-      {/* Scenic Rooms Section */}
-      <section style={{ padding: "20px" }}>
-        <h1
-          style={{ fontSize: "2rem", color: "#444", borderBottom: "2px solid #ddd", paddingBottom: "10px",    display: "grid", justifyContent:" space-around" ,fontFamily: "Dancing Script"}}
-        >
-          Scenic Rooms
-        </h1>
-
-        {/* City Room */}
-        <div  className='City View Room' style={{ marginTop: "2", padding: "10px",  display:"flex", flexWrap:"wrap",border: "1px solid #ddd", borderRadius: "8px" }}>
-   
-          <div style={{ display: "flex", gap: "20px",  flexWrap:"wrap" ,justifyContent:"space-around"}}>
-
-          {/* Garden & City Room */}
-          <div style={{ marginTop: "20px", padding: "10px", border: "1px solid #ddd", borderRadius: "8px"}}>
-          <h4 style={{ fontSize: "1.8rem", color: "#555" ,display:"grid",justifyItems:"center" }}>Mountain & City View</h4>
-          <div style={{ display: "flex", gap: "20px", marginTop: "10px",justifyContent: "space-around" }}>
-
-            <div>
-              <p style={{ margin: "5px 0" }}>
-                Price: <strong>₹4000/night</strong>
-              </p>
-              <p style={{ margin: "5px 0" }}>
-                Room Area: <strong>500 sq. ft.</strong>
-              </p>
-              <p style={{ margin: "5px 0" }}>Amenities:</p>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                <li>🌟 King-size bed</li>
-                <li>🌟 Scenic Sunrise/Mountain view</li>
-                <li>🌟 Tea/coffee maker</li>
-                <li>🌟 Music System</li>
-                <li>🌟 Carpeted Flooring</li>
-                <li>🌟 Free WiFi</li>
-              </ul>
-              <button
-                style={{
-                  marginTop: "10px",
-                  backgroundColor: "#007bff",
-                  color: "#fff",
-                  padding: "10px 15px",
-                  border: "none",
-                  borderRadius: "5px",
-                  cursor: "pointer",
-                }}
-              >
-                Send Enquiry
-              </button>
-            </div>
-          </div>
-        </div>
-            <div  className="selector_images"style={{ display: "flex", gap: "30px",justifyContent: "space-around" }}>
-              {images.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt={`Room Preview ${index + 1}`}
-                  style={{
-                       width: "10vw",
-                       height: "10vw",
-                       borderRadius: "100px",
-                       cursor: "pointer", 
-                       objectFit: "cover",
-                  }}
-                  onMouseEnter={() => handleMouseEnter(image)}
-                  onMouseLeave={handleMouseLeave}
-                />
-              ))}
-            </div>
-
-            <div
-              style={{
-                width: "fit-content",
-                height: "fit-content",
-                backgroundColor: "#f0f0f0",
-                borderRadius: "8px",
-                display: "flex",
-      
-                alignItems: "center",
-                justifyContent: "center",
-                overflow: "hidden",
-                position: "relative",
-              }}
-            >
-              {previewImage && (
-                <img
-                className="preview_img"
-                  src={previewImage}
-                  alt="Preview"
-                  style={{
-                    
-                    height: "50vw",
-                    objectFit: "cover",
-               
-                    opacity: isHovered ? 1 : 0,
-                    transition: "opacity 0.5s ease-in-out",
-                  }}
-                />
-              )}
-            </div>
-          </div>
-       
-          <div>
-     
-          </div>
-        </div>
-
-        <div  className='City View Room' style={{  padding: "10px",  display:"flex", flexWrap:"wrap",border: "1px solid #ddd", borderRadius: "8px",marginTop:"200px" }}>
-   
-   <div style={{ display: "flex", gap: "20px",  flexWrap:"wrap"  }}>
-
-   {/* Garden & City Room */}
-   <div style={{ marginTop: "20px", padding: "10px", border: "1px solid #ddd", borderRadius: "8px" }}>
-   <h4 style={{ fontSize: "1.8rem", color: "#555", display:"grid",justifyItems:"center"}}>City & garden View </h4>
-   <div style={{ display: "flex", gap: "20px", marginTop: "10px",justifyContent: "space-around" }}>
-
-     <div>
-       <p style={{ margin: "5px 0" }}>
-         Price: <strong>₹3300/night</strong>
-       </p>
-       <p style={{ margin: "5px 0" }}>
-         Room Area: <strong>500 sq. ft.</strong>
-       </p>
-       <p style={{ margin: "5px 0" }}>Amenities:</p>
-       <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-         <li>🌟 King-size bed</li>
-         <li>🌟 Scenic garden view</li>
-         <li>🌟 Free WiFi</li>
-       </ul>
-       <button
-         style={{
-           marginTop: "10px",
-           backgroundColor: "#007bff",
-           color: "#fff",
-           padding: "10px 15px",
-           border: "none",
-           borderRadius: "5px",
-           cursor: "pointer",
-         }}
-       >
-         Send Enquiry
-       </button>
-     </div>
-   </div>
- </div>
-     <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-       {images.map((image, index) => (
-         <img
-           key={index}
-           src={image}
-           alt={`Room Preview ${index + 1}`}
-           style={{
-            width: "10vw",
-                       height: "10vw",
-                       borderRadius: "100px",
-                       cursor: "pointer", 
-                       objectFit: "cover",
-             
-           }}
-           onMouseEnter={() => handleMouseEnter(image)}
-           onMouseLeave={handleMouseLeave}
-         />
-       ))}
-     </div>
-
-     <div
-       style={{
-         width: "fit-content",
-         height: "fit-content",
-         backgroundColor: "#f0f0f0",
-         borderRadius: "8px",
-         display: "flex",
-
-         alignItems: "center",
-         justifyContent: "center",
-         overflow: "hidden",
-         position: "relative",
-       }}
-     >
-       {previewImage && (
-         <img
-           src={previewImage}
-           alt="Preview"
-           style={{
-            width: "50vw",
-            
-             objectFit: "cover",
-             opacity: isHovered ? 1 : 0,
-          
-             transition: "opacity 0.5s ease-in-out",
-           }}
-         />
-       )}
-     </div>
-   </div>
-
-   <div>
-
-   </div>
- </div>
-      </section>
-
-      {/* Comfort Rooms Section */}
-      {/* <section style={{ padding: "20px" }}>
-        <h1
-          style={{ fontSize: "2rem", color: "#444", borderBottom: "2px solid #ddd", paddingBottom: "10px" }}
-        >
-          Comfort Rooms
-        </h1> */}
-
-        {/* Cozy Room */}
-        {/* <div style={{ marginTop: "20px", padding: "20px", border: "1px solid #ddd", borderRadius: "8px" }}>
-          <h4 style={{ fontSize: "1.8rem", color: "#555" }}>Cozy Room</h4>
-          <p style={{ margin: "5px 0" }}>
-            Price: <strong>₹2000/night</strong>
-          </p>
-          <p style={{ margin: "5px 0" }}>
-            Room Area: <strong>350 sq. ft.</strong>
-          </p>
-          <p style={{ margin: "5px 0" }}>Amenities:</p>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-            <li>🌟 King Size Double bed</li>
-            <li>🌟 Tea/coffee maker</li>
-          </ul>
-          <button
-            style={{
-              marginTop: "10px",
-              backgroundColor: "#007bff",
-              color: "#fff",
-              padding: "10px 15px",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-            }}
-          >
-            Send Enquiry
-          </button>
-        </div> */}
-
-        {/* Grand Room
-        <div style={{ marginTop: "20px", padding: "20px", border: "1px solid #ddd", borderRadius: "8px" }}>
-          <h4 style={{ fontSize: "1.8rem", color: "#555" }}>Grand Room</h4>
-          <p style={{ margin: "5px 0" }}>
-            Price: <strong>₹2500/night</strong>
-          </p>
-          <p style={{ margin: "5px 0" }}>
-            Room Area: <strong>600 sq. ft.</strong>
-          </p>
-          <p style={{ margin: "5px 0" }}>Amenities:</p>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-            <li>🌟 King-size bed</li>
-            <li>🌟 Private Seating Area</li>
-            <li>🌟 Luxury bath amenities</li>
-          </ul>
-          <button
-            style={{
-              marginTop: "10px",
-              backgroundColor: "#007bff",
-              color: "#fff",
-              padding: "10px 15px",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-            }}
-          >
-            Send Enquiry
-          </button>
-        </div> */}
-      {/* </section> */}
-
-   
-
-    </div>
-  );
+import RoomCard from "../src/Components/RoomCard"
+import Navbar from "./Components/navbar";
+import sampleRooms from "./Components/data"
+// helper to build WhatsApp URL
+const buildWhatsAppUrl = ({ phone, roomName, guestName = "", checkIn = "", checkOut = "" }) => {
+  let msg = `Hi, I'm interested in booking the "${roomName}" room at Leela Stays.`;
+  if (guestName) msg += ` Name: ${guestName}.`;
+  if (checkIn) msg += ` Check-in: ${checkIn}.`;
+  if (checkOut) msg += ` Check-out: ${checkOut}.`;
+  msg += " Please share availability and price.";
+  const encoded = encodeURIComponent(msg);
+  const normalizedPhone = phone.replace(/\D/g, "");
+  return `https://wa.me/${normalizedPhone}?text=${encoded}`;
 };
 
-export default RoomsPage;
+
+function EnquiryModal({ room, onClose }) {
+  const [guestName, setGuestName] = useState("");
+  const [checkIn, setCheckIn] = useState("");
+  const [checkOut, setCheckOut] = useState("");
+
+  const isValid = () => {
+    if (!checkIn) return false;
+    if (checkOut && checkOut < checkIn) return false;
+    return true;
+  };
+
+  const handleSend = () => {
+    if (!isValid()) return;
+    const waUrl = buildWhatsAppUrl({
+      phone: "+917906734034",
+      roomName: room.name,
+      guestName: guestName.trim(),
+      checkIn,
+      checkOut,
+    });
+    window.open(waUrl, "_blank");
+    onClose();
+  };
+
+  return (<>
+      
+    <div className="modal-backdrop" role="dialog" aria-modal="true">
+      <div className="modal">
+        <button onClick={onClose} className="close-btn" aria-label="Close form">
+          ×
+        </button>
+        <h2 className="modal-title">Enquire:{room.name}</h2>
+        <p className="subtext">Fill details and send via WhatsApp</p>
+        <div className="field">
+          <label>Guest Name</label>
+          <input
+            type="text"
+            placeholder="Your name"
+            value={guestName}
+            onChange={(e) => setGuestName(e.target.value)}
+          />
+        </div>
+        <div className="grid" style={{ gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+          <div className="field">
+            <label>Check-in</label>
+            <input type="date" value={checkIn} onChange={(e) => setCheckIn(e.target.value)} />
+          </div>
+          <div className="field">
+            <label>Check-out</label>
+            <input
+              type="date"
+              value={checkOut}
+              min={checkIn || undefined}
+              onChange={(e) => setCheckOut(e.target.value)}
+            />
+          </div>
+        </div>
+        <div className="modal-actions">
+          <button onClick={onClose} className="btn-secondary">
+            Cancel
+          </button>
+          <button onClick={handleSend} disabled={!isValid()} className="btn-primary">
+            Send via WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+    </>
+  );
+}
+
+<RoomCard/>
+function Rooms({ rooms = sampleRooms }) {
+  <Navbar/>
+   
+  const [activeRoom, setActiveRoom] = useState(null);
+  const grouped = rooms.reduce((acc, r) => {
+    acc[r.category] = acc[r.category] || [];
+    acc[r.category].push(r);
+    return acc;
+  }, {});
+ <Navbar/>
+  return (<>
+  <Navbar/>
+    <div className="container" style={{marginTop:"50px"}}>
+      {Object.entries(grouped).map(([category, roomList]) => (
+        <div key={category}>
+          <h2 className="section-title">
+            {category === "Scenic" ? "Scenic Rooms" : "Comfort Rooms"}
+          </h2>
+          <div className="grid grid-2">
+            {roomList.map((room) => (
+              <RoomCard key={room.id} room={room} onRequestEnquiry={(r) => setActiveRoom(r)} />
+            ))}
+          </div>
+        </div>
+      ))}
+      {activeRoom && <EnquiryModal room={activeRoom} onClose={() => setActiveRoom(null)} />}
+    </div>
+    </>
+  );
+}
+
+export default Rooms;

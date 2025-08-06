@@ -3,17 +3,16 @@ import Home from './Home';
 import Rooms from './Rooms';
 import Booking from './Booking';
 import Contact from './Contact';
-import Navbar from "./Components/navbar";
+
 import './App.css'
 function App() {
   return (
      <>
    
     <Router>
-      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/rooms" element={<Rooms />} />
+        <Route path="/rooms" element={<Rooms/>} />
         <Route path="/booking" element={<Booking />} />
         <Route path='/contact' element={<Contact/>}/>
       </Routes>
