@@ -21,8 +21,11 @@
   position: relative;
   margin: 10px 0;
   padding: 10px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  border-radius: 15px;
+  background-color: rgba(235, 231, 231, 0.3); /* Semi-transparent white */
+  backdrop-filter: blur(8px); /* The frosted glass blur effect */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  border-radius: 12px; /* Rounded corners for nicer look */
+  border: 1px solid rgba(255, 255, 255, 0.18); 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
@@ -58,19 +61,19 @@
   height: 40px !important;
   border-radius: 50% !important;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
-  border: 2px solid #4caf50 !important;
+  border: 2px solid #dddddd !important;
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 14px !important;
   font-weight: bold !important;
-  color: #4caf50 !important;
+  color: #bdbebd !important;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background: #4caf50 !important;
+  background: #ececec !important;
   transform: scale(1.1);
 }
 
@@ -87,16 +90,16 @@
 .swiper-pagination-bullet {
   width: 12px !important;
   height: 12px !important;
-  background: rgba(76, 175, 80, 0.3) !important;
-  border: 2px solid #4caf50 !important;
+  background: rgba(207, 211, 207, 0.3) !important;
+  border: 2px solid #e0ebe0 !important;
   opacity: 1 !important;
   transition: all 0.3s ease !important;
 }
 
 .swiper-pagination-bullet-active {
-  background: #4caf50 !important;
+  background: #cfd1cf !important;
   transform: scale(1.3);
-  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+  box-shadow: 0 0 10px rgba(227, 230, 227, 0.5);
 }
 
 /* Scrollbar */
@@ -107,7 +110,7 @@
 }
 
 .swiper-scrollbar-drag {
-  background: #4caf50 !important;
+  background: #caccca !important;
   border-radius: 10px !important;
 }
 
@@ -123,7 +126,7 @@
   display: inline-block;
   width: 50px;
   height: 3px;
-  background: linear-gradient(90deg, #4caf50, #45a049);
+  background: linear-gradient(90deg, #c9cfc9, #b9bdb9);
   margin: 0 10px;
   vertical-align: middle;
 }
@@ -131,6 +134,15 @@
 /* Map Section */
 .map-section {
   margin: 60px 0 40px 0;
+    color: rgb(0, 0, 0); /* translucent bleach almond */
+ padding: 3px;
+  background-color: rgba(243, 241, 241, 0.3); /* Semi-transparent white */
+  backdrop-filter: blur(8px); /* The frosted glass blur effect */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  border-radius: 12px; /* Rounded corners for nicer look */
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Optional subtle border */
+  
+ 
 }
 
 .map-title {
@@ -206,6 +218,11 @@
   font-size: 0.9em;
 }
 
+.location-details{
+  background-color: white;
+  border-radius: 15px;
+  padding: 5px;
+}
 
 .detail-item {
   display: flex;
@@ -283,6 +300,7 @@
   .photogrid-title {
     font-size: 2.2em;
     margin-bottom: 30px;
+      font-family: 'Playfair Display', serif;
   }
 
   .slider {

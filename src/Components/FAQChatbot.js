@@ -116,7 +116,7 @@ const FAQChatbot = ({ faqsPath, apiKey }) => {
           border-radius: 16px;
           display: flex;
           flex-direction: column;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-family: 'Playfair Display', serif;
           color: #222;
           z-index: 99999;
         }
