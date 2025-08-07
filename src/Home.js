@@ -7,7 +7,6 @@ import Photogrid from "./Components/Photogrid";
 
 
 
-
 const Home = () =>(
     <div>
        <Navbar/>
@@ -19,6 +18,7 @@ const Home = () =>(
       <div className="section-divider"></div>
    <LeelaStaysMap/>
      <div className="section-divider"></div>
+   
   <Footer/>
    <div style={{ marginBottom: '40px',marginTop:'40px'  }} />
     </div>

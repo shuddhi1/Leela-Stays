@@ -1,0 +1,22 @@
+[  {
+    "question": "What is the check-in time?",
+    "answer": "Check-in starts at 3 PM."
+  },
+  {
+    "question": "Is breakfast included?",
+    "answer": "Yes, complimentary breakfast is provided."
+  },
+  {
+    "question": "Do you have free Wi-Fi?",
+    "answer": "Yes, free Wi-Fi is available throughout the homestay."
+  }
+,
+  {
+    "question": "What is the cancellation policy?",
+    "answer": "Cancellations made 48 hours before check-in are fully refundable."
+  },
+  {
+    "question": "Are pets allowed?",
+    "answer": "Pets are not allowed in the homestay."
+  }
+]

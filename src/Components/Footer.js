@@ -1,5 +1,6 @@
 import React from "react";
 import backgroundImage from "../media/out4.jpeg";
+
 function Footer() {
   const footerStyle = {
     //  backgroundColor: "#D4C9AB",
@@ -39,6 +40,7 @@ function Footer() {
       
     
       </div>
+     
     </footer>
   );
 }
