@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import RoomCard from "../src/Components/RoomCard"
 import Navbar from "./Components/navbar";
-import sampleRooms from "./Components/data"
+import sampleRooms from "./Components/data";
+import Footer from "./Components/Footer";
 // helper to build WhatsApp URL
 const buildWhatsAppUrl = ({ phone, roomName, guestName = "", checkIn = "", checkOut = "" }) => {
   let msg = `Hi, I'm interested in booking the "${roomName}" room at Leela Stays.`;
@@ -114,6 +115,7 @@ function Rooms({ rooms = sampleRooms }) {
       ))}
       {activeRoom && <EnquiryModal room={activeRoom} onClose={() => setActiveRoom(null)} />}
     </div>
+      <Footer/>
     </>
   );
 }

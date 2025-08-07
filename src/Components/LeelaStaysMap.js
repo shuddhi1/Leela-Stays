@@ -13,29 +13,20 @@ function LeelaStaysMap() {
       
       </div>
       
-      <div className="location-details">
-        <div className="detail-item">
-          <span className="icon">🏔️</span>
-          <div>
-            <h5>Mountain Location</h5>
-            <p>Nestled in scenic mountain surroundings</p>
-          </div>
-        </div>
-        <div className="detail-item">
-          <span className="icon">🚗</span>
-          <div>
-            <h5>Easy Access</h5>
-            <p>Well-connected by road with parking available</p>
-          </div>
-        </div>
-        <div className="detail-item">
-          <span className="icon">🌲</span>
-          <div>
-            <h5>Natural Setting</h5>
-            <p>Surrounded by lush greenery and fresh air</p>
-          </div>
-        </div>
-      </div>
+    <div class="location-details">
+  <h2>🗺️ Explore Nearby</h2>
+  <ul>
+    <li>🛍️ <strong>Mall Road</strong> – 6 min (vehicle)</li>
+    <li>🚠 <strong>Gun Hill</strong> – 10 min</li>
+    <li>🎡 <strong>Company Garden</strong> – 13 min</li>
+    <li>🌄 <strong>Clouds End</strong> – 20 min</li>
+    <li>☕ <strong>Landour</strong> – 20 min</li>
+    <li>🏞️ <strong>George Everest Peak</strong> – 22 min</li>
+    <li>🏊‍♂️ <strong>Kempty Falls</strong> – 30 min</li>
+    <li>🛕 <strong>Bhadraj Temple</strong> – 50 min</li>
+  </ul>
+</div>
+
     </div>
   </div>
   )

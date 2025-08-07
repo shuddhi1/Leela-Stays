@@ -20,7 +20,7 @@ function Footer() {
 
 
   const paragraphStyle = {
-    fontSize: "2.1rem",
+    fontSize: "1.1rem",
     opacity: "0.9",
     display: "grid", 
     placeItems: "center",
@@ -32,7 +32,8 @@ function Footer() {
         {/* About Section */}
         <div className="footnote">
           <p style={paragraphStyle}>
-            Escape to serenity with Leela Stays, nestled in the picturesque hills of Mussoorie!.
+            Escape to serenity with Leela Stays!
+         
           </p>
         </div>
       

@@ -51,7 +51,7 @@ function Photogrid() {
         breakpoints={{
 
           313: {
-            slidesPerView: 2, // 1 slide for very small screens (like iPhone SE)
+            slidesPerView: 1, // 1 slide for very small screens (like iPhone SE)
             spaceBetween: 10, // Less space for smaller devices
           },
           480: {
@@ -103,7 +103,7 @@ function Photogrid() {
         onSlideChange={() => console.log('slide change')}
         breakpoints={{
           313: {
-            slidesPerView: 2, // 1 slide for very small screens (like iPhone SE)
+            slidesPerView: 1, // 1 slide for very small screens (like iPhone SE)
             spaceBetween: 10, // Less space for smaller devices
           },
           480: {
