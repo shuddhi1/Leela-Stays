@@ -15,7 +15,8 @@ const Home = () =>(
   
     <Photogrid/>
     <div style={{ marginBottom: '40px',marginTop:'40px' }} />
-     
+     <LeelaStaysMap/>
+        <div style={{ marginBottom: '40px',marginTop:'40px'  }} />
   <Footer/>
    <div style={{ marginBottom: '40px',marginTop:'40px'  }} />
     </div>
