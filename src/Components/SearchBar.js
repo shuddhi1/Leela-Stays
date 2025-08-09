@@ -1,12 +1,30 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
 
-// Detect if device is iOS
+// Detect if device is iOS (kept for future if needed for other tweaks)
 const isIOS = () => {
   return (
     typeof navigator !== "undefined" &&
     /iPad|iPhone|iPod/.test(navigator.userAgent) &&
     !window.MSStream
+  );
+};
+
+// Floating label input for date selection
+const DateInput = ({ id, value, setValue, label }) => {
+  return (
+    <div className="floating-label-input">
+      <input
+        id={id}
+        type="date"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        required
+      />
+      <label htmlFor={id} className={value ? "filled" : ""}>
+        {label}
+      </label>
+    </div>
   );
 };
 
@@ -49,33 +67,13 @@ const SearchBar = () => {
       : alert("Please enter all the information");
   };
 
-  // Component to handle input type switch on iOS
-  const DateInput = ({ id, value, setValue, placeholder }) => {
-    const [type, setType] = useState(isIOSDevice ? "text" : "date");
-
-    return (
-      <input
-        id={id}
-        type={type}
-        placeholder={isIOSDevice ? placeholder : undefined}
-        value={value}
-        onFocus={() => isIOSDevice && setType("date")}
-        onBlur={(e) => {
-          if (isIOSDevice && !e.target.value) {
-            setType("text");
-          }
-        }}
-        onChange={(e) => setValue(e.target.value)}
-        required
-      />
-    );
-  };
-
   return (
     <div className="searchwrapper">
       <div className="search-bar">
         <h2>Discover Unparalleled Serenity at LeelaStays</h2>
         <form className="search-form" onSubmit={handleSearch}>
+          
+          {/* Booking Name */}
           <div className="form-group">
             <input
               id="customerName"
@@ -87,24 +85,23 @@ const SearchBar = () => {
             />
           </div>
 
-          <div className="form-group">
-            <DateInput
-              id="arrdate"
-              value={arrivalDate}
-              setValue={setArrivalDate}
-              placeholder="Arrival"
-            />
-          </div>
+          {/* Arrival Date */}
+          <DateInput
+            id="arrdate"
+            value={arrivalDate}
+            setValue={setArrivalDate}
+            label="Arrival Date"
+          />
 
-          <div className="form-group">
-            <DateInput
-              id="depdate"
-              value={departureDate}
-              setValue={setDepartureDate}
-              placeholder="Departure"
-            />
-          </div>
+          {/* Departure Date */}
+          <DateInput
+            id="depdate"
+            value={departureDate}
+            setValue={setDepartureDate}
+            label="Departure Date"
+          />
 
+          {/* Guest Picker */}
           <div className="form-group guests">
             <input
               id="members"
@@ -177,6 +174,7 @@ const SearchBar = () => {
             )}
           </div>
 
+          {/* Submit / WhatsApp Inquiry */}
           <div className="form-group">
             <button
               type="submit"
@@ -186,6 +184,7 @@ const SearchBar = () => {
               Inquire
             </button>
           </div>
+
         </form>
       </div>
     </div>
