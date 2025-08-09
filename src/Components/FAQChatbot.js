@@ -110,10 +110,10 @@ const FAQChatbot = ({ faqsPath, apiKey }) => {
           right: 24px;
           width: 350px;
           max-width: 90vw;
-          height: 480px;
+          height: 400px;
           background: #ffffff;
           box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
-          border-radius: 16px;
+          border-radius: 30px;
           display: flex;
           flex-direction: column;
           font-family: 'Playfair Display', serif;

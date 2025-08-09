@@ -294,6 +294,7 @@ body {
   max-width: 420px;
   width: 100%;
   padding: 1.25rem 1.5rem;
+  z-index: 333;
   position: relative;
   box-shadow: 0 35px 80px -15px rgba(0,0,0,0.2);
 }

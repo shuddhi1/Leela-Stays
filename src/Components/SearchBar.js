@@ -42,7 +42,8 @@ const SearchBar = () => {
   };
   
   return (
-    <div className="search-bar-container" style={{borderRadius:"12px"}}>
+    <div className="searchwrapper">
+    <div className="search-bar" >
       <h2>Discover Unparalleled Serenity at LeelaStays</h2>
       <form className="search-form" onSubmit={handleSearch}>
         <div className="form-group">
@@ -148,6 +149,7 @@ const SearchBar = () => {
 
       </form>
     
+    </div>
     </div>
 
   );

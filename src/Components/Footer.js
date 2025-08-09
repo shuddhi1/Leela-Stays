@@ -4,7 +4,7 @@ import backgroundImage from "../media/out4.jpeg";
 function Footer() {
   const footerStyle = {
     //  backgroundColor: "#D4C9AB",
-   
+    borderRadius: "30px",
     color: "white",
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',  
@@ -21,7 +21,7 @@ function Footer() {
 
 
   const paragraphStyle = {
-    fontSize: "1.1rem",
+    fontSize: "2.1rem",
     opacity: "0.9",
     display: "grid", 
     placeItems: "center",

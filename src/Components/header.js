@@ -18,7 +18,9 @@ function Header() {
         display: 'flex',  
         flexDirection:'column',              // Flexbox for centering content
         alignItems: 'center',           // Vertically centers content
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
+        marginTop:'25px',
+        borderRadius:"20px"
              // Horizontally centers content
       }}
     >
