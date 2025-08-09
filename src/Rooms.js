@@ -41,7 +41,7 @@ function EnquiryModal({ room, onClose }) {
   };
 
   return (<>
-      
+     
     <div className="modal-backdrop" role="dialog" aria-modal="true">
       <div className="modal">
         <button onClick={onClose} className="close-btn" aria-label="Close form">
@@ -89,7 +89,7 @@ function EnquiryModal({ room, onClose }) {
 
 <RoomCard/>
 function Rooms({ rooms = sampleRooms }) {
-  <Navbar/>
+  
    
   const [activeRoom, setActiveRoom] = useState(null);
   const grouped = rooms.reduce((acc, r) => {
@@ -97,9 +97,10 @@ function Rooms({ rooms = sampleRooms }) {
     acc[r.category].push(r);
     return acc;
   }, {});
- <Navbar/>
+
   return (<>
   <Navbar/>
+
     <div className="container" style={{marginTop:"50px"}}>
       {Object.entries(grouped).map(([category, roomList]) => (
         <div key={category}>

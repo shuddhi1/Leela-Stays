@@ -113,7 +113,7 @@ const FAQChatbot = ({ faqsPath, apiKey }) => {
           height: 400px;
           background: #ffffff;
           box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
-          border-radius: 30px;
+          border-radius: 20px;
           display: flex;
           flex-direction: column;
           font-family: 'Playfair Display', serif;

@@ -1,5 +1,6 @@
 import React from "react";
 import backgroundImage from "../media/out4.jpeg";
+import GoogleReviews from "./GoogleReviews";
 
 function Footer() {
   const footerStyle = {
@@ -20,22 +21,17 @@ function Footer() {
 
 
 
-  const paragraphStyle = {
-    fontSize: "2.1rem",
-    opacity: "0.9",
-    display: "grid", 
-    placeItems: "center",
-};
+
 
   return (
     <footer style={footerStyle}>
       <div   className='dancing-script' style={containerStyle}>
         {/* About Section */}
-        <div className="footnote">
-          <p style={paragraphStyle}>
-            Escape to serenity with Leela Stays!
-         
-          </p>
+        <div className="reviews">
+       <GoogleReviews 
+  apiKey="AIzaSyDPmUO04XNAho96DQxacgRSk6GNFUXu9Pg" 
+  placeId="ChIJRXDiAwDRCDkRXptF1zPmvCI" 
+/>
         </div>
       
     

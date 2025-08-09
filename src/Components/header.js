@@ -20,7 +20,7 @@ function Header() {
         alignItems: 'center',           // Vertically centers content
         justifyContent: 'flex-start',
         marginTop:'25px',
-        borderRadius:"20px"
+        borderRadius:"10px"
              // Horizontally centers content
       }}
     >

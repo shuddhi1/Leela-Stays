@@ -37,7 +37,7 @@ function RoomCard({ room, onRequestEnquiry }) {
   const handleNext = () => {
     scrollTo(Math.min(images.length - 1, currentIndex + 1));
   };
-<Navbar/>
+
   return (
     <div className="room-card">
       <div className="carousel">
