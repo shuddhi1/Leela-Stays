@@ -44,7 +44,7 @@ const GoogleReviews = ({ apiKey, placeId }) => {
     <div className="google-reviews">
       <h2 >Google Reviews</h2>
       <div ref={mapRef} style={{ display: "none" }} />
-      {reviews.length > 0 ? (
+      {reviews.length-1 > 0 ? (
         reviews.map((review, index) => (
           <div
             key={index}

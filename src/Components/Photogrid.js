@@ -1,145 +1,90 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import "swiper/css/autoplay";
+import React, { useState, useRef } from 'react';
 import './Photogrid.css';
+
 import photo1 from '../media/Rainy1.jpeg';
-import photo2 from '../media/Room2.jpeg';
+import photo2 from '../media/out7.jpeg';
 import photo3 from '../media/mall.jpg';
 import photo4 from '../media/Outside_morning.jpeg';
-import photo5 from '../media/window.jpeg';
+import photo5 from '../media/out6.jpeg';
 import photo6 from '../media/Cloud.jpeg';
-
+import photo7 from '../media/out5.jpeg';
 import photo8 from '../media/sunset.jpg';
-import photo9 from '../media/WhatsApp Image 2025-01-08 at 6.36.11 PM.jpeg';
-import photo7 from "../media/out5.jpeg";
-import photo10 from "../media/nightsky.jpg";
+import photo9 from '../media/out4.jpeg';
+import photo10 from '../media/out.jpeg';
+import photo11 from '../media/out2.jpeg';
+import photo12 from '../media/out3.jpeg';
 
-import photo11 from "../media/out.jpeg";
-
-import photo12 from "../media/out2.jpeg";
-
-import photo13 from "../media/out3.jpeg";
-
-import photo14 from "../media/out4.jpeg";
- import photo15 from "../media/out5.jpeg";
- import photo16 from "../media/out6.jpeg";
- import photo17 from "../media/out7.jpeg"
-import Content from './Content';
-
+const photos = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12];
 
 function Photogrid() {
+  const [zoomedPhoto, setZoomedPhoto] = useState(null);
+  const timerRef = useRef(null);
+
+  // Long press detection: starts timer on mouse/touch down, clears on up or leave
+  const startPressTimer = (photo) => {
+    timerRef.current = setTimeout(() => {
+      setZoomedPhoto(photo);
+    }, 500); // 500ms for long press
+  };
+
+  const clearPressTimer = () => {
+    clearTimeout(timerRef.current);
+  };
+
+  const closeZoom = () => setZoomedPhoto(null);
+
   return (
-    <div className="photogrid-container">
-      <h2 className="photogrid-title">Experience the Beauty of Leela Stays</h2>
-      
-      <div className="slider_container">
-        <div className="navigation-hint left">← Swipe</div>
-        <div className="navigation-hint right">Swipe →</div>
-    
-    <Swiper 
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={20}
- 
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        breakpoints={{
+    <>
+      <div className="photogrid-container">
+       <div className="photogrid-header">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    stroke="#2c3e50"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    width="40"
+    height="40"
+    viewBox="0 0 24 24"
+  >
+    <path d="M1 21h22L12 2 1 21z" />
+    <path d="M9 17l3-3 3 3" />
+  </svg>
+  <h2 className="photogrid-title">Experience the Beauty of Mussoorie</h2>
+</div>
 
-          313: {
-            slidesPerView: 1, // 1 slide for very small screens (like iPhone SE)
-            spaceBetween: 10, // Less space for smaller devices
-          },
-          480: {
-            slidesPerView: 1, // 1 slide for smaller phones in portrait
-            spaceBetween: 15, // Slightly more space
-          },
-          768: {
-            slidesPerView: 2, // 2 slides for tablets (iPad and larger phones)
-            spaceBetween: 20, // Moderate spacing
-          },
-          1024: {
-            slidesPerView: 3, // 3 slides for standard desktops
-            spaceBetween: 25, // Default spacing for larger screens
-          },
-          1280: {
-            slidesPerView: 4, // 4 slides for wider desktops
-            spaceBetween: 30, // More space for wide screens
-          },
-        }}
-        
-        
-        onSlideChange={() => console.log('slide change')}>
-     <SwiperSlide> <img  src={photo9} alt="Rainy day view at Leela Stays"  className='slider' /></SwiperSlide>
-      
-       <SwiperSlide> <img  src={photo14} alt="Rainy day view at Leela Stays"  className='slider' /></SwiperSlide>
-    <SwiperSlide> <img  src={photo1} alt="Rainy day view at Leela Stays"  className='slider' /></SwiperSlide>
-    <SwiperSlide> <img  src={photo2} alt="Comfortable room interior"  className='slider' /></SwiperSlide>
-    <SwiperSlide> <img  src={photo3} alt="Nearby shopping mall"  className='slider' /></SwiperSlide>
-    <SwiperSlide> <img  src={photo4} alt="Beautiful morning outside view"  className='slider' /></SwiperSlide>
-    <SwiperSlide> <img  src={photo7} alt="Beautiful morning outside view"  className='slider' /></SwiperSlide>
-     <SwiperSlide> <img  src={photo17} alt="Rainy day view at Leela Stays"  className='slider'/></SwiperSlide>
-  </Swiper>
-  </div>
-  
-  
-      <div className="section-divider"></div>
-  
-  <div className="slider_container">
-    <div className="navigation-hint left">← Swipe</div>
-    <div className="navigation-hint right">Swipe →</div>
-    <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={20}
-        
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
-        breakpoints={{
-          313: {
-            slidesPerView: 1, // 1 slide for very small screens (like iPhone SE)
-            spaceBetween: 10, // Less space for smaller devices
-          },
-          480: {
-            slidesPerView: 2, // 1 slide for smaller phones in portrait
-            spaceBetween: 15, // Slightly more space
-          },
-          768: {
-            slidesPerView: 2, // 2 slides for tablets (iPad and larger phones)
-            spaceBetween: 20, // Moderate spacing
-          },
-          1024: {
-            slidesPerView: 3, // 3 slides for standard desktops
-            spaceBetween: 25, // Default spacing for larger screens
-          },
-          1280: {
-            slidesPerView: 4, // 4 slides for wider desktops
-            spaceBetween: 30, // More space for wide screens
-          },
-        }}
-        
-        
-    >
-       <SwiperSlide> <img  src={photo15} alt="Rainy day view at Leela Stays"  className='slider' /></SwiperSlide>
-    <SwiperSlide> <img  src={photo6} alt="Cloudy mountain view"  className='slider' /></SwiperSlide>
-    <SwiperSlide> <img  src={photo5} alt="Window view from room"  className='slider' /></SwiperSlide>
-     <SwiperSlide> <img  src={photo11} alt="Rainy day view at Leela Stays"  className='slider' /></SwiperSlide>
-    <SwiperSlide> <img  src={photo8} alt="Beautiful sunset view"  className='slider' /></SwiperSlide>
-     <SwiperSlide> <img  src={photo12} alt="Rainy day view at Leela Stays"  className='slider' /></SwiperSlide>
-    <SwiperSlide> <img  src={photo16} alt="Scenic landscape view"  className='slider' /></SwiperSlide>
-    <SwiperSlide> <img  src={photo4} alt="Beautiful morning outside view"  className='slider' /></SwiperSlide>
-  </Swiper>
-  </div>
-  
+        <div className="grid-gallery">
+          {photos.map((photo, idx) => (
+            <div
+              key={idx}
+              className="grid-item"
+              onMouseDown={() => startPressTimer(photo)}
+              onTouchStart={() => startPressTimer(photo)}
+              onMouseUp={clearPressTimer}
+              onMouseLeave={clearPressTimer}
+              onTouchEnd={clearPressTimer}
+              onTouchCancel={clearPressTimer}
+              tabIndex={0}
+              role="button"
+              aria-label={`Zoom view of photo ${idx + 1}`}
+            >
+              <img src={photo} alt={`Leela Stays View ${idx + 1}`} />
+            </div>
+          ))}
+        </div>
+      </div>
 
-    </div>
-  )
+      {zoomedPhoto && (
+        <div className="zoom-overlay" onClick={closeZoom} role="dialog" aria-modal="true">
+          <img src={zoomedPhoto} alt="Zoomed view" className="zoomed-image" />
+          <button className="close-btn" onClick={closeZoom} aria-label="Close zoom view">
+            &times;
+          </button>
+        </div>
+      )}
+    </>
+  );
 }
 
-export default Photogrid
+export default Photogrid;
