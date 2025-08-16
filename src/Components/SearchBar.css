@@ -26,6 +26,8 @@ justify-content: space-around;
 }
 .search-bar-container input{
   border-radius: 10px;
+  height: 2rem;
+  align-items: center
 }
 .search-bar h2 {
   text-align: center;
@@ -39,7 +41,7 @@ justify-content: space-around;
 .search-form {
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 1.1rem;align-items: center;
 }
 
 /* Floating label inputs */
@@ -118,7 +120,7 @@ justify-content: space-around;
 .search-button,
 .apply-button {
   width: 100%;
-  padding: 14px 0;
+
   border: none;
   border-radius: 10px;
   background: linear-gradient(90deg, #3e8df7 0%, #5bc6ff 100%);
