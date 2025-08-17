@@ -37,20 +37,7 @@ function Photogrid() {
     <>
       <div className="photogrid-container">
        <div className="photogrid-header">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    stroke="#2c3e50"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    width="40"
-    height="40"
-    viewBox="0 0 24 24"
-  >
-    <path d="M1 21h22L12 2 1 21z" />
-    <path d="M9 17l3-3 3 3" />
-  </svg>
+  
   <h2 className="photogrid-title">Experience the Beauty of Mussoorie</h2>
 </div>
 
@@ -82,6 +69,7 @@ function Photogrid() {
             &times;
           </button>
         </div>
+        
       )}
     </>
   );
